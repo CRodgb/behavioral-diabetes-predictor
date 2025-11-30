@@ -243,7 +243,12 @@ NUMERIC_INPUT_COLS = {
     "Unhealthy_Days_Total",
     "Body_Mass_Index",
     "Weight_Pounds",
-    "Age_Code"
+    "Age_Code",
+    "Heavy_Drinking_Flag"
+}
+
+FLOAT_COLS = {
+    "Body_Mass_Index"
 }
 
 # ----------------- SHAP label helpers -----------------
@@ -365,13 +370,13 @@ def prettify_feature_name(raw_name: str) -> str:
 
 
 # ---------------------------------------------------
-# Labels & help text
+# Labels, help text, & UI category mapping
 # ---------------------------------------------------
 LABELS = {
     "Physical_Activity": "Physical activity in past 30 days",
     "Alcohol_Risk_Level": "Alcohol risk level",
     "Average_Drinks_Per_Day": "Average drinks per day (on drinking days)",
-    "Heavy_Drinking_Flag": "Heavy drinking status",
+    "Heavy_Drinking_Flag": "Number of heavy drinking days (past 30 days)",
     "Current_Smoking_Frequency": "Current smoking frequency",
     "Ever_Smoked_100_Cigarettes": "Ever smoked ≥100 cigarettes",
     "Mentally_Unhealthy_Days_Count": "Mentally unhealthy days (past 30 days)",
@@ -409,6 +414,36 @@ HELP_TEXTS = {
     "State_Name": "State or territory",
 }
 
+UI_CATEGORY_MAPPINGS = {
+    # --- BEHAVIORAL ---
+    "Physical_Activity": {1.0: "Yes", 2.0: "No"},
+    "Alcohol_Risk_Level": {0.0: "None", 1.0: "Moderate", 2.0: "Heavy"},
+    "Current_Smoking_Frequency": {1.0: "Every day", 2.0: "Some days", 3.0: "Not at all"},
+    "Ever_Smoked_100_Cigarettes": {1.0: "Yes", 2.0: "No"},
+
+    # --- ANTHROPOMETRIC ---
+    "BMI_Category": {1.0: "Underweight", 2.0: "Normal Weight", 3.0: "Overweight", 4.0: "Obese"},
+    "Biological_Sex": {1.0: "Male", 2.0: "Female"},
+
+    # --- DEMOGRAPHIC ---
+    "Race_Ethnicity_Group": {
+        1.0: "White", 2.0: "Black", 3.0: "Other", 4.0: "Multiracial", 5.0: "Hispanic",
+        np.nan: "Don't know"
+    },
+    "Education_Level": {
+        1.0: "Never Attended", 2.0: "Elementary", 3.0: "Some High School", 
+        4.0: "High School Grad", 5.0: "Some College", 6.0: "College Grad",
+        np.nan: "Not sure"
+    },
+    "Household_Income_Category": {
+        1.0: "< $10k", 2.0: "$10k-$15k", 3.0: "$15k-$20k", 4.0: "$20k-$25k", 
+        5.0: "$25k-$35k", 6.0: "$35k-$50k", 7.0: "$50k-$75k", 8.0: "$75k-$100k",
+        9.0: "$100k-$150k", 10.0: "$150k-$200k", 11.0: "$200k+",
+        np.nan: "Don't know"
+    }
+}
+
+
 # ---------------------------------------------------
 # Helper functions: numeric ranges, inputs, SHAP, PDF
 # ---------------------------------------------------
@@ -443,14 +478,26 @@ def render_numeric_input(col_name: str, container):
     min_v, max_v = get_numeric_bounds(col_name)
     default_val = clamp_default(col_name, min_v, max_v)
 
-    return container.number_input(
-        LABELS.get(col_name, col_name),
-        min_value=float(min_v),
-        max_value=float(max_v),
-        value=float(default_val),
-        step=0.1,
-        help=HELP_TEXTS.get(col_name, ""),
-    )
+    if col_name in FLOAT_COLS:
+        return container.number_input(
+            LABELS.get(col_name, col_name),
+            min_value=float(min_v),
+            max_value=float(max_v),
+            value=float(default_val),
+            step=0.1,
+            format="%.1f",
+            help=HELP_TEXTS.get(col_name, ""),
+        )
+    
+    else:
+        return container.number_input(
+            LABELS.get(col_name, col_name),
+            min_value=int(min_v),
+            max_value=int(max_v),
+            value=int(default_val),
+            step=1,
+            help=HELP_TEXTS.get(col_name, ""),
+        )
 
 
 def render_categorical_input(col_name: str, container):
@@ -463,10 +510,23 @@ def render_categorical_input(col_name: str, container):
     else:
         index = 0
 
+    def format_option(option):
+        mapping = UI_CATEGORY_MAPPINGS.get(col_name, {})
+        if option in mapping:
+            return mapping[option]
+        try:
+            float_val = float(option)
+            if float_val in mapping:
+                return mapping[float_val]
+        except (ValueError, TypeError):
+            pass
+        return str(option)
+
     return container.selectbox(
         LABELS.get(col_name, col_name),
         options=choices,
         index=index,
+        format_func=format_option,
         help=HELP_TEXTS.get(col_name, ""),
     )
 

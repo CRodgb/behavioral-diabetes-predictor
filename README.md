@@ -187,7 +187,7 @@ python -m streamlit run app/diabetes_predictor.py
 | Name | Socials |
 | :--- | :--- |
 | **Sumit Barua** | [![LinkedIn][LinkedIn]](https://www.linkedin.com/in/sumit-barua/) [![GitHub][GitHub]](https://github.com/sum1tbarua) |
-| **Sohaib Jabran** | [![LinkedIn][LinkedIn]](https://www.linkedin.com/in/sohaib-jabran/)|
+| **Sohaib Jabran** | [![LinkedIn][LinkedIn]](https://www.linkedin.com/in/sohaib-jabran/) [![GitHub][GitHub]](https://github.com/sohaibjabran) | |
 | **Charles Rodgers** | [![LinkedIn][LinkedIn]](https://www.linkedin.com/in/charlesrodgers01/) [![GitHub][GitHub]](https://github.com/CRodgb) |
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

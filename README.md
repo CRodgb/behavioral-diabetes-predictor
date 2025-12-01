@@ -66,7 +66,7 @@ Uses explainable AI, **SHAP (SHapley Additive exPlanations)** to break down feat
 ## Features
 
 ### Interactive Patient Profiling:
-* Easy to use, dynamic inputs.  
+Easy to use, dynamic inputs.  
 
 #### 1. Lifestyle / Behavioral Factors  
 ---
@@ -82,7 +82,7 @@ Uses explainable AI, **SHAP (SHapley Additive exPlanations)** to break down feat
 
 ### 4. Real-time prediction  
 ---
- Instant multiclass risk assessment using a pre-trained XGBoost pipeline.
+Instant multiclass risk assessment using a pre-trained XGBoost pipeline.
 
 ### Explainable AI:
 

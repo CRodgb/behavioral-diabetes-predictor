@@ -20,15 +20,15 @@
       </ul>
     </li>
     <li><a href="#features">Features</a></li>
-    <li><a href="#reasearch-context">Research Context</a></li>
+    <li><a href="#research-context">Research Context</a></li>
     <li>
         <a href="#getting-started">Getting Started</a>
         <ul>
             <li><a href="#prerequisites">Prerequisites</a></li>
-            <li><a href="#1.-installation"></a>1. Installation</li>
-            <li><a href="#2.-setting-up-virtual-environment">2. Setting up virtual environment</a></li>
-            <li><a href="#3.-installing-dependencies">3. Installing dependencies</a></li>
-            <li><a href="#4.-running-application">4. Running application</a></li>
+            <li><a href="#1-installation">1. Installation</a></li>
+            <li><a href="#2-setting-up-virtual-environment">2. Setting up virtual environment</a></li>
+            <li><a href="#3-installing-dependencies">3. Installing dependencies</a></li>
+            <li><a href="#4-running-application">4. Running application</a></li>
         </ul>
     </li>
     <li><a href="#authors">Authors</a></li>
@@ -69,13 +69,13 @@ Uses explainable AI, **SHAP (SHapley Additive exPlanations)** to break down feat
 Easy to use, dynamic inputs.  
 
 #### Lifestyle / Behavioral Factors
-![](assets/Behavioral.png)
+<kbd>![](assets/Behavioral.png)</kbd>
 
 #### Body & Health Profile
-![](assets/Anthropometric.png)
+<kbd>![](assets/Anthropometric.png)</kbd>
 
 #### Demographic Context
-![](assets/Demographic.png)
+<kbd>![](assets/Demographic.png)</kbd>
 
 ### Real-time prediction:
  Instant multiclass risk assessment using a pre-trained XGBoost pipeline.
@@ -84,12 +84,12 @@ Easy to use, dynamic inputs.
 #### Primary SHAP Drivers:  
 Reports the top 5 factors responsible for the prediction.  
 
-![](assets/BasicExplanation.png)
+<kbd>![](assets/BasicExplanation.png)</kbd>
 
 #### Full SHAP Impact Breakdown:  
 Reports and visualizes the top 15 factors responsible for the prediction.  
 
-![](assets/DetailedExplanation.png)
+<kbd>![](assets/DetailedExplanation.png)</kbd>
 
 ### PDF Reports:
 Generates a downloadable summary of the patient profile and risk factors.

@@ -72,7 +72,7 @@ Easy to use, dynamic inputs.
 ---
 <p align="center">
   <kbd>
-    <img src="assets/Behavioral.png" alt="Lifestyle/Behavioral Inputs" width="600">
+    <img src="assets/Behavioral.png" alt="Lifestyle/Behavioral Inputs" width="400">
   </kbd>
 </p>
 
@@ -80,7 +80,7 @@ Easy to use, dynamic inputs.
 ---
 <p align="center">
   <kbd>
-    <img src="assets/Anthropometric.png" alt="Body & Health Profile Inputs" width="600">
+    <img src="assets/Anthropometric.png" alt="Body & Health Profile Inputs" width="400">
   </kbd>
 </p>
 
@@ -88,7 +88,7 @@ Easy to use, dynamic inputs.
 ---
 <p align="center">
   <kbd>
-    <img src="assets/Demographic.png" alt="Demographic Context Imputs" width="600">
+    <img src="assets/Demographic.png" alt="Demographic Context Imputs" width="400">
   </kbd>
 </p>
 
@@ -104,7 +104,7 @@ Reports the top 5 factors responsible for the prediction.
 
 <p align="center">
   <kbd>
-    <img src="assets/BasicExplanation.png" alt="Prediction and primary SHAP driver results" width="600">
+    <img src="assets/BasicExplanation.png" alt="Prediction and primary SHAP driver results" width="400">
   </kbd>
 </p>
 
@@ -114,7 +114,7 @@ Reports and visualizes the top 15 factors responsible for the prediction.
 
 <p align="center">
   <kbd>
-    <img src="assets/DetailedExplanation.png" alt="Full primary SHAP driver results" width="600">
+    <img src="assets/DetailedExplanation.png" alt="Full primary SHAP driver results" width="400">
   </kbd>
 </p>
 

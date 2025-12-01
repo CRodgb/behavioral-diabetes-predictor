@@ -108,7 +108,7 @@ Generates a downloadable summary of the patient profile and risk factors.
 
 **(insert link to journal here)**  
 
-This application is the implementation of a comparative study evaluating the predictive power of **behavioral** vs. **demographic & anthropometric** features. that can be found.
+This application is the implementation of a comparative study evaluating the predictive power of **behavioral** vs. **demographic & anthropometric** features.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

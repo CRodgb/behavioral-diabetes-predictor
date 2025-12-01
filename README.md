@@ -70,15 +70,27 @@ Easy to use, dynamic inputs.
 
 #### 1. Lifestyle / Behavioral Factors  
 ---
-<kbd>![](assets/Behavioral.png)</kbd>
+<p align="center">
+  <kbd>
+    <img src="assets/Behavioral.png" alt="Lifestyle/Behavioral Inputs" width="600">
+  </kbd>
+</p>
 
 #### 2. Body & Health Profile  
 ---
-<kbd>![](assets/Anthropometric.png)</kbd>
+<p align="center">
+  <kbd>
+    <img src="assets/Anthropometric.png" alt="Body & Health Profile Inputs" width="600">
+  </kbd>
+</p>
 
 #### 3. Demographic Context  
 ---
-<kbd>![](assets/Demographic.png)</kbd>
+<p align="center">
+  <kbd>
+    <img src="assets/Demographic.png" alt="Demographic Context Imputs" width="600">
+  </kbd>
+</p>
 
 ### 4. Real-time prediction  
 ---
@@ -90,13 +102,21 @@ Instant multiclass risk assessment using a pre-trained XGBoost pipeline.
 ---
 Reports the top 5 factors responsible for the prediction.  
 
-<kbd>![](assets/BasicExplanation.png)</kbd>
+<p align="center">
+  <kbd>
+    <img src="assets/BasicExplanation.png" alt="Prediction and primary SHAP driver results" width="600">
+  </kbd>
+</p>
 
 #### 2. Full SHAP Impact Breakdown  
 ---
 Reports and visualizes the top 15 factors responsible for the prediction.  
 
-<kbd>![](assets/DetailedExplanation.png)</kbd>
+<p align="center">
+  <kbd>
+    <img src="assets/DetailedExplanation.png" alt="Full primary SHAP driver results" width="600">
+  </kbd>
+</p>
 
 ### PDF Reports:
 Generates a downloadable summary of the patient profile and risk factors.

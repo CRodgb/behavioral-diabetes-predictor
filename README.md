@@ -66,27 +66,34 @@ Uses explainable AI, **SHAP (SHapley Additive exPlanations)** to break down feat
 ## Features
 
 ### Interactive Patient Profiling:
-Easy to use, dynamic inputs.  
+* Easy to use, dynamic inputs.  
 
-#### Lifestyle / Behavioral Factors
+#### 1. Lifestyle / Behavioral Factors  
+---
 <kbd>![](assets/Behavioral.png)</kbd>
 
-#### Body & Health Profile
+#### 2. Body & Health Profile  
+---
 <kbd>![](assets/Anthropometric.png)</kbd>
 
-#### Demographic Context
+#### 3. Demographic Context  
+---
 <kbd>![](assets/Demographic.png)</kbd>
 
-### Real-time prediction:
+### 4. Real-time prediction  
+---
  Instant multiclass risk assessment using a pre-trained XGBoost pipeline.
 
-### Explainable AI
-#### Primary SHAP Drivers:  
+### Explainable AI:
+
+#### 1. Primary SHAP Drivers
+---
 Reports the top 5 factors responsible for the prediction.  
 
 <kbd>![](assets/BasicExplanation.png)</kbd>
 
-#### Full SHAP Impact Breakdown:  
+#### 2. Full SHAP Impact Breakdown  
+---
 Reports and visualizes the top 15 factors responsible for the prediction.  
 
 <kbd>![](assets/DetailedExplanation.png)</kbd>

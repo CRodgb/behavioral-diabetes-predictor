@@ -125,8 +125,6 @@ git clone https://github.com/CRodgb/behavioral-diabetes-predictor.git
 
 2. Activate your environment  
 
-    > Note: you may need to 
-
     For Windows command prompt:  
     ``` sh
     .venv\Scripts\activate.bat
